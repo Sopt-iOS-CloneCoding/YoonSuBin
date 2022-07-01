@@ -9,6 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    //MARK: - Properties
     private lazy var dotButton: UIButton = {
         let bt = UIButton()
         bt.setTitleColor(UIColor.white, for: .normal)
@@ -16,86 +17,16 @@ class ViewController: UIViewController {
         bt.backgroundColor = .darkGray
         return bt
     }()
-    
-    private lazy var zeroButton: UIButton = {
-        let bt = UIButton()
-        bt.setTitleColor(UIColor.white, for: .normal)
-        bt.setTitle("0", for: .normal)
-        bt.backgroundColor = .darkGray
-        return bt
-    }()
-    
-    private lazy var oneButton: UIButton = {
-        let bt = UIButton()
-        bt.setTitleColor(UIColor.white, for: .normal)
-        bt.setTitle("1", for: .normal)
-        bt.backgroundColor = .darkGray
-        return bt
-    }()
-    
-    private lazy var twoButton: UIButton = {
-        let bt = UIButton()
-        bt.setTitleColor(UIColor.white, for: .normal)
-        bt.setTitle("2", for: .normal)
-        bt.backgroundColor = .darkGray
-        return bt
-    }()
-    
-    private lazy var threeButton: UIButton = {
-        let bt = UIButton()
-        bt.setTitleColor(UIColor.white, for: .normal)
-        bt.setTitle("3", for: .normal)
-        bt.backgroundColor = .darkGray
-        return bt
-    }()
-    
-    private lazy var fourButton: UIButton = {
-        let bt = UIButton()
-        bt.setTitleColor(UIColor.white, for: .normal)
-        bt.setTitle("4", for: .normal)
-        bt.backgroundColor = .darkGray
-        return bt
-    }()
-    
-    private lazy var fiveButton: UIButton = {
-        let bt = UIButton()
-        bt.setTitleColor(UIColor.white, for: .normal)
-        bt.setTitle("5", for: .normal)
-        bt.backgroundColor = .darkGray
-        return bt
-    }()
-    
-    private lazy var sixButton: UIButton = {
-        let bt = UIButton()
-        bt.setTitleColor(UIColor.white, for: .normal)
-        bt.setTitle("6", for: .normal)
-        bt.backgroundColor = .darkGray
-        return bt
-    }()
-    
-    private lazy var sevenButton: UIButton = {
-        let bt = UIButton()
-        bt.setTitleColor(UIColor.white, for: .normal)
-        bt.setTitle("7", for: .normal)
-        bt.backgroundColor = .darkGray
-        return bt
-    }()
-    
-    private lazy var eightButton: UIButton = {
-        let bt = UIButton()
-        bt.setTitleColor(UIColor.white, for: .normal)
-        bt.setTitle("8", for: .normal)
-        bt.backgroundColor = .darkGray
-        return bt
-    }()
-    
-    private lazy var nineButton: UIButton = {
-        let bt = UIButton()
-        bt.setTitleColor(UIColor.white, for: .normal)
-        bt.setTitle("9", for: .normal)
-        bt.backgroundColor = .darkGray
-        return bt
-    }()
+    private lazy var zeroButton = CustomButton()
+    private lazy var oneButton = CustomButton()
+    private lazy var twoButton = CustomButton()
+    private lazy var threeButton = CustomButton()
+    private lazy var fourButton = CustomButton()
+    private lazy var fiveButton = CustomButton()
+    private lazy var sixButton = CustomButton()
+    private lazy var sevenButton = CustomButton()
+    private lazy var eightButton = CustomButton()
+    private lazy var nineButton = CustomButton()
     
     private lazy var allclearButton: UIButton = {
         let bt = UIButton()
@@ -188,12 +119,27 @@ class ViewController: UIViewController {
     }
     
     private func setButtons() {
-        let allBtns: [UIButton] = [zeroButton, oneButton, twoButton, threeButton, fourButton,
-                                   fiveButton, sixButton, sevenButton, eightButton, nineButton,
-                                   allclearButton, negativeButton, percentButton, equalButton,
+        
+        let numBtns: [UIButton] = [zeroButton, oneButton, twoButton, threeButton, fourButton,
+                                    fiveButton, sixButton, sevenButton, eightButton, nineButton]
+        let operatorBtns: [UIButton] = [allclearButton, negativeButton, percentButton, equalButton,
                                    addButton, subtractButton, multiplyeButton, divideButton, dotButton]
         
-        for btn in allBtns {
+        var i: Int = 0
+        
+        zeroButton.contentHorizontalAlignment = .left
+        zeroButton.titleEdgeInsets = UIEdgeInsets(top: 0.0, left: 32.0, bottom: 0.0, right: 0.0)
+        
+        for btn in numBtns {
+            numBtns[i].setTitle("\(i)", for: .normal)
+            i += 1
+            print(i)
+            
+            btn.heightAnchor.constraint(equalToConstant: (view.frame.width - 50) / 4).isActive = true
+            btn.titleLabel?.font = .systemFont(ofSize: 35, weight: .regular)
+        }
+        
+        for btn in operatorBtns {
             if btn == dotButton || btn == equalButton {
                 btn.widthAnchor.constraint(equalToConstant: (view.frame.width - 50) / 4).isActive = true
             }

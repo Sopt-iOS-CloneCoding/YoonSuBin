@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E433F3B286593DB00F0914D /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E433F3A286593DB00F0914D /* CustomButton.swift */; };
 		8E63EB1428636577009756F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E63EB1328636577009756F8 /* AppDelegate.swift */; };
 		8E63EB1628636577009756F8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E63EB1528636577009756F8 /* SceneDelegate.swift */; };
 		8E63EB1828636577009756F8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E63EB1728636577009756F8 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8E433F3A286593DB00F0914D /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		8E63EB1028636577009756F8 /* Calculator-Clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Calculator-Clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E63EB1328636577009756F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8E63EB1528636577009756F8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				8E63EB1328636577009756F8 /* AppDelegate.swift */,
 				8E63EB1528636577009756F8 /* SceneDelegate.swift */,
 				8E63EB1728636577009756F8 /* ViewController.swift */,
+				8E433F3A286593DB00F0914D /* CustomButton.swift */,
 				8E63EB1928636577009756F8 /* Main.storyboard */,
 				8E63EB1C28636578009756F8 /* Assets.xcassets */,
 				8E63EB1E28636578009756F8 /* LaunchScreen.storyboard */,
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E433F3B286593DB00F0914D /* CustomButton.swift in Sources */,
 				8E63EB1828636577009756F8 /* ViewController.swift in Sources */,
 				8E63EB1428636577009756F8 /* AppDelegate.swift in Sources */,
 				8E63EB1628636577009756F8 /* SceneDelegate.swift in Sources */,
