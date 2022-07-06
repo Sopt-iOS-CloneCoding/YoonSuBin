@@ -19,15 +19,20 @@
 		8E0EA3612816B08400F8B0D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E0EA3602816B08400F8B0D5 /* Main.storyboard */; };
 		8E0EA36B2816B48D00F8B0D5 /* StopwatchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E0EA36A2816B48D00F8B0D5 /* StopwatchView.xib */; };
 		8E0EA36D2816B4A600F8B0D5 /* StopwatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0EA36C2816B4A600F8B0D5 /* StopwatchView.swift */; };
+		8E55C156286ED03100B57265 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8E55C155286ED03100B57265 /* SnapKit */; };
+		8E55C159286ED05100B57265 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 8E55C158286ED05100B57265 /* Then */; };
 		8E5A5F99280E8B31003AA3D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5A5F98280E8B31003AA3D8 /* AppDelegate.swift */; };
 		8E5A5F9B280E8B31003AA3D8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5A5F9A280E8B31003AA3D8 /* SceneDelegate.swift */; };
 		8E5A5FA2280E8B32003AA3D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E5A5FA1280E8B32003AA3D8 /* Assets.xcassets */; };
 		8E5A5FA5280E8B32003AA3D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E5A5FA3280E8B32003AA3D8 /* LaunchScreen.storyboard */; };
+		8E64558E2875780A00ED1E13 /* AlarmTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E64558D2875780A00ED1E13 /* AlarmTableViewCell.swift */; };
+		8E6455902875786500ED1E13 /* SleepTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E64558F2875786500ED1E13 /* SleepTableViewCell.swift */; };
 		8E7EFB2528192D6E00AD7E08 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7EFB2428192D6E00AD7E08 /* CustomButton.swift */; };
 		8E7EFB27281978BB00AD7E08 /* StopwatchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7EFB26281978BB00AD7E08 /* StopwatchModel.swift */; };
 		8E7EFB2928197D3700AD7E08 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7EFB2828197D3700AD7E08 /* Color.swift */; };
 		8E7EFB5A28200A1600AD7E08 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7EFB5928200A1600AD7E08 /* TimerView.swift */; };
 		8EC5CD45280FDD69008C1C43 /* TabBarMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC5CD44280FDD69008C1C43 /* TabBarMainViewController.swift */; };
+		8EDD4E74286F1ABD00EFB2AA /* AlarmTableViewHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDD4E73286F1ABD00EFB2AA /* AlarmTableViewHeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,11 +54,14 @@
 		8E5A5FA1280E8B32003AA3D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8E5A5FA4280E8B32003AA3D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8E5A5FA6280E8B32003AA3D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8E64558D2875780A00ED1E13 /* AlarmTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmTableViewCell.swift; sourceTree = "<group>"; };
+		8E64558F2875786500ED1E13 /* SleepTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepTableViewCell.swift; sourceTree = "<group>"; };
 		8E7EFB2428192D6E00AD7E08 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		8E7EFB26281978BB00AD7E08 /* StopwatchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopwatchModel.swift; sourceTree = "<group>"; };
 		8E7EFB2828197D3700AD7E08 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		8E7EFB5928200A1600AD7E08 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		8EC5CD44280FDD69008C1C43 /* TabBarMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarMainViewController.swift; sourceTree = "<group>"; };
+		8EDD4E73286F1ABD00EFB2AA /* AlarmTableViewHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmTableViewHeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +69,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E55C156286ED03100B57265 /* SnapKit in Frameworks */,
+				8E55C159286ED05100B57265 /* Then in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,6 +117,14 @@
 				8E5A5FA6280E8B32003AA3D8 /* Info.plist */,
 			);
 			path = "Clock-Clone";
+			sourceTree = "<group>";
+		};
+		8E645591287578A000ED1E13 /* SectionHeader */ = {
+			isa = PBXGroup;
+			children = (
+				8EDD4E73286F1ABD00EFB2AA /* AlarmTableViewHeaderView.swift */,
+			);
+			path = SectionHeader;
 			sourceTree = "<group>";
 		};
 		8EC5CD1C280FD84D008C1C43 /* Global */ = {
@@ -157,9 +175,9 @@
 		8EC5CD21280FD899008C1C43 /* Alarm */ = {
 			isa = PBXGroup;
 			children = (
-				8EC5CD29280FD907008C1C43 /* Model */,
-				8EC5CD28280FD903008C1C43 /* View */,
-				8EC5CD27280FD8FE008C1C43 /* Controller */,
+				8EDD4E72286EE6C500EFB2AA /* Cells */,
+				8E0EA35A2816AA4E00F8B0D5 /* AlarmViewController.swift */,
+				8E0EA3522816A9E800F8B0D5 /* Alarm.storyboard */,
 			);
 			path = Alarm;
 			sourceTree = "<group>";
@@ -201,29 +219,6 @@
 			sourceTree = "<group>";
 		};
 		8EC5CD26280FD8FA008C1C43 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		8EC5CD27280FD8FE008C1C43 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				8E0EA35A2816AA4E00F8B0D5 /* AlarmViewController.swift */,
-				8E0EA3522816A9E800F8B0D5 /* Alarm.storyboard */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		8EC5CD28280FD903008C1C43 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		8EC5CD29280FD907008C1C43 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 			);
@@ -336,6 +331,16 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		8EDD4E72286EE6C500EFB2AA /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				8E645591287578A000ED1E13 /* SectionHeader */,
+				8E64558F2875786500ED1E13 /* SleepTableViewCell.swift */,
+				8E64558D2875780A00ED1E13 /* AlarmTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -352,6 +357,10 @@
 			dependencies = (
 			);
 			name = "Clock-Clone";
+			packageProductDependencies = (
+				8E55C155286ED03100B57265 /* SnapKit */,
+				8E55C158286ED05100B57265 /* Then */,
+			);
 			productName = "Clock-Clone";
 			productReference = 8E5A5F95280E8B31003AA3D8 /* Clock-Clone.app */;
 			productType = "com.apple.product-type.application";
@@ -380,6 +389,10 @@
 				Base,
 			);
 			mainGroup = 8E5A5F8C280E8B31003AA3D8;
+			packageReferences = (
+				8E55C154286ED03100B57265 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				8E55C157286ED05100B57265 /* XCRemoteSwiftPackageReference "Then" */,
+			);
 			productRefGroup = 8E5A5F96280E8B31003AA3D8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -414,9 +427,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E0EA35D2816AA6700F8B0D5 /* StopwatchViewController.swift in Sources */,
+				8EDD4E74286F1ABD00EFB2AA /* AlarmTableViewHeaderView.swift in Sources */,
+				8E6455902875786500ED1E13 /* SleepTableViewCell.swift in Sources */,
 				8E0EA35B2816AA4E00F8B0D5 /* AlarmViewController.swift in Sources */,
 				8E7EFB2528192D6E00AD7E08 /* CustomButton.swift in Sources */,
 				8E0EA3592816AA3400F8B0D5 /* WorldClockViewController.swift in Sources */,
+				8E64558E2875780A00ED1E13 /* AlarmTableViewCell.swift in Sources */,
 				8E0EA35F2816AA7C00F8B0D5 /* TimerViewController.swift in Sources */,
 				8EC5CD45280FDD69008C1C43 /* TabBarMainViewController.swift in Sources */,
 				8E7EFB5A28200A1600AD7E08 /* TimerView.swift in Sources */,
@@ -492,7 +508,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -546,7 +562,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -634,6 +650,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8E55C154286ED03100B57265 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		8E55C157286ED05100B57265 /* XCRemoteSwiftPackageReference "Then" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devxoul/Then";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8E55C155286ED03100B57265 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8E55C154286ED03100B57265 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		8E55C158286ED05100B57265 /* Then */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8E55C157286ED05100B57265 /* XCRemoteSwiftPackageReference "Then" */;
+			productName = Then;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8E5A5F8D280E8B31003AA3D8 /* Project object */;
 }
