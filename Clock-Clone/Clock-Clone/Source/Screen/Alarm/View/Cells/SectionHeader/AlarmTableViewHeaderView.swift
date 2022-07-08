@@ -46,22 +46,22 @@ class AlarmTableViewHeaderView: UITableViewHeaderFooterView {
     }
     
     private func configureUI() {
-        addSubview(pageTitleLabel)
+        
+        addSubviews(pageTitleLabel, sectionIconImageView, sectionSubtitleLabel)
+        
         pageTitleLabel.snp.makeConstraints { make in
-            make.top.leading.equalToSuperview().offset(15)
+            make.top.leading.equalToSuperview().offset(10)
         }
         
-        addSubview(sectionIconImageView)
         sectionIconImageView.snp.makeConstraints { make in
-            make.top.equalTo(pageTitleLabel.snp.bottom).offset(15)
-            make.leading.equalToSuperview().offset(15)
+            make.top.equalTo(pageTitleLabel.snp.bottom).offset(10)
+            make.leading.equalToSuperview().offset(10)
         }
         
-        addSubview(sectionSubtitleLabel)
         sectionSubtitleLabel.snp.makeConstraints { make in
             make.leading.equalTo(sectionIconImageView.snp.trailing).offset(5)
             make.centerY.equalTo(sectionIconImageView)
-            make.bottom.equalToSuperview().inset(15)
+            make.bottom.equalToSuperview().inset(10)
         }
         
     }

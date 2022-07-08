@@ -11,8 +11,14 @@ class SleepTableViewCell: UITableViewCell {
     
     static let identifier = "SleepTableViewCell"
     
+    private let dayAndNightLabel = UILabel().then {
+        $0.text = "오전"
+        $0.font = UIFont.systemFont(ofSize: 40, weight: .light)
+        $0.textColor = .white
+    }
+    
     private let timeLabel = UILabel().then {
-        $0.text = "06:30"
+        $0.text = "6:30"
         $0.font = UIFont.systemFont(ofSize: 60, weight: .light)
         $0.textColor = .white
     }
@@ -42,23 +48,28 @@ class SleepTableViewCell: UITableViewCell {
     }
     
     private func configureUI() {
-        addSubview(timeLabel)
-        timeLabel.snp.makeConstraints { make in
-            make.top.equalToSuperview().offset(5)
-            make.leading.equalToSuperview().offset(15)
+        
+        addSubviews(dayAndNightLabel, timeLabel, repeatLabel, changeButton)
+        
+        dayAndNightLabel.snp.makeConstraints { make in
+            make.top.equalToSuperview().offset(25)
+            make.leading.equalToSuperview().offset(10)
         }
         
-        addSubview(repeatLabel)
+        timeLabel.snp.makeConstraints { make in
+            make.leading.equalTo(dayAndNightLabel.snp.trailing)
+            make.bottom.equalTo(dayAndNightLabel.snp.bottom).offset(5)
+        }
+        
         repeatLabel.snp.makeConstraints { make in
-            make.top.equalTo(timeLabel.snp.bottom)
-            make.leading.equalToSuperview().offset(15)
+            make.top.equalTo(dayAndNightLabel.snp.bottom)
+            make.leading.equalToSuperview().offset(10)
             make.bottom.equalToSuperview().inset(10)
         }
         
-        addSubview(changeButton)
         changeButton.snp.makeConstraints { make in
             make.trailing.equalToSuperview().inset(15)
-            make.centerY.equalTo(timeLabel)
+            make.centerY.equalTo(dayAndNightLabel)
             make.width.equalTo(50)
             make.height.equalTo(30)
         }
