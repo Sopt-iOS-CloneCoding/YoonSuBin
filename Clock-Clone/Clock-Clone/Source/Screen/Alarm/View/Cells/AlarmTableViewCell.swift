@@ -11,8 +11,14 @@ class AlarmTableViewCell: UITableViewCell {
     
     static let identifier = "AlarmTableViewCell"
     
+    private let dayAndNightLabel = UILabel().then {
+        $0.text = "오전"
+        $0.font = UIFont.systemFont(ofSize: 40, weight: .light)
+        $0.textColor = .gray
+    }
+    
     private let timeLabel = UILabel().then {
-        $0.text = "08:00"
+        $0.text = "8:00"
         $0.font = UIFont.systemFont(ofSize: 60, weight: .light)
         $0.textColor = .gray
     }
@@ -29,12 +35,9 @@ class AlarmTableViewCell: UITableViewCell {
         $0.textColor = .gray
     }
     
-    private let activationSwitch = UISwitch()
-
-//    override func awakeFromNib() {
-//        super.awakeFromNib()
-//        configureUI()
-//    }
+    private lazy var activationSwitch = UISwitch().then {
+        $0.addTarget(self, action: #selector(switchValueChanged(_:)), for: .valueChanged)
+    }
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -47,29 +50,47 @@ class AlarmTableViewCell: UITableViewCell {
     }
     
     private func configureUI() {
-        addSubview(timeLabel)
-        timeLabel.snp.makeConstraints { make in
-            make.top.equalToSuperview().offset(5)
-            make.leading.equalToSuperview().offset(15)
+        
+        addSubviews(dayAndNightLabel, timeLabel, contentLabel, repeatLabel, activationSwitch)
+        
+        dayAndNightLabel.snp.makeConstraints { make in
+            make.top.equalToSuperview().offset(25)
+            make.leading.equalToSuperview().offset(10)
         }
         
-        addSubview(contentLabel)
+        timeLabel.snp.makeConstraints { make in
+            make.leading.equalTo(dayAndNightLabel.snp.trailing)
+            make.bottom.equalTo(dayAndNightLabel.snp.bottom).offset(5)
+        }
+        
         contentLabel.snp.makeConstraints { make in
-            make.top.equalTo(timeLabel.snp.bottom)
-            make.leading.equalToSuperview().offset(15)
+            make.top.equalTo(dayAndNightLabel.snp.bottom)
+            make.leading.equalToSuperview().offset(10)
             make.bottom.equalToSuperview().inset(10)
         }
         
-        addSubview(repeatLabel)
         repeatLabel.snp.makeConstraints { make in
             make.leading.equalTo(contentLabel.snp.trailing)
             make.centerY.equalTo(contentLabel)
         }
         
-        addSubview(activationSwitch)
         activationSwitch.snp.makeConstraints { make in
             make.trailing.equalToSuperview().inset(15)
-            make.centerY.equalTo(timeLabel)
+            make.centerY.equalTo(dayAndNightLabel)
+        }
+    }
+    
+    @objc func switchValueChanged(_ sender: UISwitch) {
+        if self.activationSwitch.isOn {
+            dayAndNightLabel.textColor = .white
+            timeLabel.textColor = .white
+            contentLabel.textColor = .white
+            repeatLabel.textColor = .white
+        } else {
+            dayAndNightLabel.textColor = .gray
+            timeLabel.textColor = .gray
+            contentLabel.textColor = .gray
+            repeatLabel.textColor = .gray
         }
     }
 }

@@ -19,6 +19,11 @@
 		8E0EA3612816B08400F8B0D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E0EA3602816B08400F8B0D5 /* Main.storyboard */; };
 		8E0EA36B2816B48D00F8B0D5 /* StopwatchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E0EA36A2816B48D00F8B0D5 /* StopwatchView.xib */; };
 		8E0EA36D2816B4A600F8B0D5 /* StopwatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0EA36C2816B4A600F8B0D5 /* StopwatchView.swift */; };
+		8E26765B2875B9E0001C565B /* AddNewAlarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E26765A2875B9E0001C565B /* AddNewAlarmViewController.swift */; };
+		8E26765E2875C37D001C565B /* AlarmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E26765D2875C37D001C565B /* AlarmModel.swift */; };
+		8E26766428772201001C565B /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E26766328772201001C565B /* UIView+.swift */; };
+		8E26766728772334001C565B /* AddNewAlarmTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E26766628772334001C565B /* AddNewAlarmTableViewCell.swift */; };
+		8E26766928772CA7001C565B /* AddAlarmTableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E26766828772CA7001C565B /* AddAlarmTableModel.swift */; };
 		8E55C156286ED03100B57265 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8E55C155286ED03100B57265 /* SnapKit */; };
 		8E55C159286ED05100B57265 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 8E55C158286ED05100B57265 /* Then */; };
 		8E5A5F99280E8B31003AA3D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5A5F98280E8B31003AA3D8 /* AppDelegate.swift */; };
@@ -48,6 +53,11 @@
 		8E0EA3602816B08400F8B0D5 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		8E0EA36A2816B48D00F8B0D5 /* StopwatchView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StopwatchView.xib; sourceTree = "<group>"; };
 		8E0EA36C2816B4A600F8B0D5 /* StopwatchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopwatchView.swift; sourceTree = "<group>"; };
+		8E26765A2875B9E0001C565B /* AddNewAlarmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewAlarmViewController.swift; sourceTree = "<group>"; };
+		8E26765D2875C37D001C565B /* AlarmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmModel.swift; sourceTree = "<group>"; };
+		8E26766328772201001C565B /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
+		8E26766628772334001C565B /* AddNewAlarmTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewAlarmTableViewCell.swift; sourceTree = "<group>"; };
+		8E26766828772CA7001C565B /* AddAlarmTableModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAlarmTableModel.swift; sourceTree = "<group>"; };
 		8E5A5F95280E8B31003AA3D8 /* Clock-Clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Clock-Clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E5A5F98280E8B31003AA3D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8E5A5F9A280E8B31003AA3D8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -85,11 +95,37 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		8E0EA3672816B29000F8B0D5 /* Model */ = {
+		8E26765C2875C35C001C565B /* Model */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		8E26765F2875C396001C565B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8E26765D2875C37D001C565B /* AlarmModel.swift */,
+				8E26766828772CA7001C565B /* AddAlarmTableModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8E2676612875C3B0001C565B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8EDD4E72286EE6C500EFB2AA /* Cells */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8E2676622875C3C1001C565B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8E0EA35A2816AA4E00F8B0D5 /* AlarmViewController.swift */,
+				8E26765A2875B9E0001C565B /* AddNewAlarmViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		8E5A5F8C280E8B31003AA3D8 = {
@@ -138,6 +174,7 @@
 		8EC5CD1D280FD854008C1C43 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				8E26766328772201001C565B /* UIView+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -175,9 +212,10 @@
 		8EC5CD21280FD899008C1C43 /* Alarm */ = {
 			isa = PBXGroup;
 			children = (
-				8EDD4E72286EE6C500EFB2AA /* Cells */,
-				8E0EA35A2816AA4E00F8B0D5 /* AlarmViewController.swift */,
+				8E26765F2875C396001C565B /* Model */,
+				8E2676612875C3B0001C565B /* View */,
 				8E0EA3522816A9E800F8B0D5 /* Alarm.storyboard */,
+				8E2676622875C3C1001C565B /* Controller */,
 			);
 			path = Alarm;
 			sourceTree = "<group>";
@@ -316,7 +354,7 @@
 		8EC5CD3E280FDB4F008C1C43 /* TabBarMain */ = {
 			isa = PBXGroup;
 			children = (
-				8E0EA3672816B29000F8B0D5 /* Model */,
+				8E26765C2875C35C001C565B /* Model */,
 				8E0EA3662816B28800F8B0D5 /* View */,
 				8EC5CD46280FDD83008C1C43 /* Controller */,
 			);
@@ -337,6 +375,7 @@
 				8E645591287578A000ED1E13 /* SectionHeader */,
 				8E64558F2875786500ED1E13 /* SleepTableViewCell.swift */,
 				8E64558D2875780A00ED1E13 /* AlarmTableViewCell.swift */,
+				8E26766628772334001C565B /* AddNewAlarmTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -432,14 +471,19 @@
 				8E0EA35B2816AA4E00F8B0D5 /* AlarmViewController.swift in Sources */,
 				8E7EFB2528192D6E00AD7E08 /* CustomButton.swift in Sources */,
 				8E0EA3592816AA3400F8B0D5 /* WorldClockViewController.swift in Sources */,
+				8E26766428772201001C565B /* UIView+.swift in Sources */,
 				8E64558E2875780A00ED1E13 /* AlarmTableViewCell.swift in Sources */,
 				8E0EA35F2816AA7C00F8B0D5 /* TimerViewController.swift in Sources */,
 				8EC5CD45280FDD69008C1C43 /* TabBarMainViewController.swift in Sources */,
+				8E26765E2875C37D001C565B /* AlarmModel.swift in Sources */,
+				8E26766728772334001C565B /* AddNewAlarmTableViewCell.swift in Sources */,
+				8E26765B2875B9E0001C565B /* AddNewAlarmViewController.swift in Sources */,
 				8E7EFB5A28200A1600AD7E08 /* TimerView.swift in Sources */,
 				8E5A5F99280E8B31003AA3D8 /* AppDelegate.swift in Sources */,
 				8E7EFB2928197D3700AD7E08 /* Color.swift in Sources */,
 				8E7EFB27281978BB00AD7E08 /* StopwatchModel.swift in Sources */,
 				8E0EA36D2816B4A600F8B0D5 /* StopwatchView.swift in Sources */,
+				8E26766928772CA7001C565B /* AddAlarmTableModel.swift in Sources */,
 				8E5A5F9B280E8B31003AA3D8 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -34,14 +34,7 @@ class AlarmViewController: UIViewController {
     
     private func configureUI() {
         navigationBarUI()
-        
-        view.addSubview(contentTableView)
-        contentTableView.snp.makeConstraints { make in
-            make.leading.top.trailing.bottom.equalTo(view.safeAreaLayoutGuide)
-        }
-        contentTableView.separatorStyle = .singleLine
-        contentTableView.separatorInsetReference = .fromAutomaticInsets
-        contentTableView.separatorColor = .darkGray
+        setContentTableView()
     }
     
     private func setNavigationBar() {
@@ -66,6 +59,7 @@ class AlarmViewController: UIViewController {
             bt.setTitle("+", for: .normal)
             bt.titleLabel?.font = .systemFont(ofSize: 30, weight: .light)
             bt.addAction(UIAction(handler: { _ in
+                self.addAlarm()
             }), for: .touchUpInside)
             bt.frame = CGRect(x: 0, y: 0, width: 24, height: 24)
             return bt
@@ -78,9 +72,24 @@ class AlarmViewController: UIViewController {
         self.navigationItem.setRightBarButton(rightBtn, animated: false)
     }
     
+    private func setContentTableView() {
+        view.addSubview(contentTableView)
+        contentTableView.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
+        }
+        contentTableView.separatorStyle = .singleLine
+        contentTableView.separatorInsetReference = .fromAutomaticInsets
+        contentTableView.separatorColor = .darkGray
+    }
+    
     private func setDelegate() {
         contentTableView.delegate = self
         contentTableView.dataSource = self
+    }
+    
+    private func addAlarm() {
+        let vc = AddNewAlarmViewController()
+        self.present(vc, animated: true)
     }
 }
 
